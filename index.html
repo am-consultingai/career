@@ -290,13 +290,206 @@
 
     // ===== Jobs data (unchanged) =====
     const jobs = [
-      { id: 1, title: 'FP&A Analyst', department: 'finance', departmentDisplay: 'Finance', location: 'Tel Aviv, Israel', type: 'Full-time', description: "We're seeking a talented Financial Planning & Analysis Analyst to join our finance team and drive strategic financial decision-making.", responsibilities: ['Create and maintain comprehensive financial forecasting models to support strategic business planning','Conduct detailed variance analysis between actual results and budget projections, identifying key drivers','Prepare monthly, quarterly, and annual financial reports for senior leadership and stakeholders','Collaborate with department leaders to develop accurate budget forecasts and track performance','Build dynamic dashboards and reporting tools to provide real-time financial visibility','Support strategic initiatives through detailed financial modeling and scenario analysis','Analyze business metrics and KPIs to identify opportunities for improvement and growth'], requirements: ["Bachelor's degree in Finance, Accounting, Economics, or related quantitative field",'2-4 years of experience in financial planning, analysis, or related finance role','Strong proficiency in Excel including advanced formulas, pivot tables, and financial modeling','Experience with financial planning software or BI tools (e.g., Adaptive Insights, Tableau, Power BI)','Exceptional analytical and problem-solving capabilities with attention to detail','Excellent communication skills with ability to present complex financial data clearly','Understanding of accounting principles and financial statements','Ability to work independently and manage multiple priorities in a fast-paced environment'] },
-      { id: 2, title: 'Senior Software Engineer', department: 'rnd', departmentDisplay: 'R&D', location: 'Tel Aviv, Israel', type: 'Full-time', description: 'Join our R&D team to build innovative AI-powered solutions that transform how businesses operate and make decisions.', responsibilities: ['Design and develop high-quality, scalable software solutions for AI-driven applications','Lead technical architecture decisions and establish best practices for the development team','Collaborate with product managers and designers to translate requirements into technical solutions','Mentor junior engineers and conduct thorough code reviews to maintain code quality','Optimize application performance and ensure system reliability at scale','Research and integrate cutting-edge technologies and AI frameworks into products','Contribute to technical documentation and knowledge sharing within the team'], requirements: ["Bachelor's or Master's degree in Computer Science, Engineering, or related technical field",'5+ years of professional software development experience','Strong proficiency in modern programming languages (Python, JavaScript, Java, or similar)','Experience building and deploying production-grade applications','Solid understanding of software architecture patterns and design principles','Familiarity with cloud platforms (AWS, Azure, or GCP) and containerization technologies','Experience with AI/ML frameworks is a strong advantage','Excellent problem-solving skills and ability to work in an agile environment'] },
-      { id: 3, title: 'Machine Learning Engineer', department: 'rnd', departmentDisplay: 'R&D', location: 'Tel Aviv, Israel', type: 'Full-time', description: 'Build and deploy advanced machine learning models that power our AI consulting solutions and drive client success.', responsibilities: ['Design, develop, and deploy machine learning models for various business applications','Work with large datasets to extract meaningful insights and train robust ML models','Optimize model performance through feature engineering and hyperparameter tuning','Collaborate with software engineers to integrate ML models into production systems','Stay current with latest ML research and apply innovative techniques to solve business problems','Build automated ML pipelines for model training, evaluation, and deployment','Monitor model performance in production and implement improvements as needed'], requirements: ["Master's or PhD in Computer Science, Data Science, Machine Learning, or related field",'3+ years of hands-on experience developing and deploying ML models in production','Strong programming skills in Python and ML frameworks (TensorFlow, PyTorch, scikit-learn)','Deep understanding of machine learning algorithms, deep learning, and statistical methods','Experience with MLOps practices and tools for model deployment and monitoring','Proficiency in data processing and analysis using pandas, NumPy, and similar libraries','Strong mathematical foundation in linear algebra, statistics, and optimization','Excellent communication skills to explain complex technical concepts to non-technical stakeholders'] },
-      { id: 4, title: 'Data Scientist', department: 'rnd', departmentDisplay: 'R&D', location: 'Tel Aviv, Israel', type: 'Full-time', description: 'Leverage data analytics and machine learning to uncover insights that drive strategic decisions for our clients.', responsibilities: ['Analyze complex datasets to identify patterns, trends, and actionable business insights','Develop predictive models and statistical analyses to solve business challenges','Create compelling data visualizations and dashboards to communicate findings effectively','Collaborate with cross-functional teams to understand business needs and translate them into analytical solutions','Design and conduct experiments (A/B tests) to validate hypotheses and measure impact','Build and maintain data pipelines to ensure reliable access to quality data','Present analytical findings and recommendations to stakeholders and clients'], requirements: ["Master's degree in Data Science, Statistics, Computer Science, or quantitative field",'3+ years of experience in data science or analytics role','Strong proficiency in Python or R for statistical analysis and modeling','Experience with data visualization tools (Tableau, Power BI, or similar)','Solid understanding of statistical methods, hypothesis testing, and experimental design','Familiarity with SQL and database technologies for data extraction and manipulation','Knowledge of machine learning techniques and when to apply them','Excellent storytelling ability to translate technical findings into business value'] },
-      { id: 5, title: 'DevOps Engineer', department: 'rnd', departmentDisplay: 'R&D', location: 'Tel Aviv, Israel', type: 'Full-time', description: 'Build and maintain the infrastructure that powers our AI solutions, ensuring reliability, scalability, and security.', responsibilities: ['Design and implement CI/CD pipelines to automate software delivery processes','Manage cloud infrastructure and ensure optimal performance, security, and cost-efficiency','Implement monitoring, logging, and alerting systems for proactive issue detection','Collaborate with development teams to optimize application deployment and scaling','Automate infrastructure provisioning using Infrastructure as Code tools','Ensure system security through implementation of best practices and regular audits','Troubleshoot production issues and implement solutions to prevent recurrence'], requirements: ["Bachelor's degree in Computer Science, Engineering, or related technical field",'3+ years of experience in DevOps, Site Reliability Engineering, or similar role','Strong experience with cloud platforms (AWS, Azure, or GCP)','Proficiency in containerization technologies (Docker, Kubernetes)','Experience with Infrastructure as Code tools (Terraform, CloudFormation, Ansible)','Solid scripting skills in Python, Bash, or similar languages','Knowledge of monitoring and logging tools (Prometheus, Grafana, ELK stack)','Understanding of networking, security principles, and system architecture'] },
-      { id: 6, title: 'Full Stack Developer', department: 'rnd', departmentDisplay: 'R&D', location: 'Tel Aviv, Israel', type: 'Full-time', description: 'Develop end-to-end solutions that deliver exceptional user experiences and power our AI consulting platform.', responsibilities: ['Build responsive and intuitive web applications using modern frontend frameworks','Develop robust backend services and APIs to support application functionality','Design and implement database schemas and optimize query performance','Collaborate with UX designers to implement pixel-perfect user interfaces','Write clean, maintainable, and well-tested code following best practices','Integrate third-party services and APIs to extend application capabilities','Participate in code reviews and contribute to technical documentation'], requirements: ["Bachelor's degree in Computer Science or related field, or equivalent experience",'3+ years of full stack development experience','Strong proficiency in frontend technologies (React, Vue.js, or Angular)','Experience with backend frameworks (Node.js, Django, Flask, or similar)','Solid understanding of RESTful API design and implementation','Proficiency in database technologies (SQL and NoSQL)','Familiarity with version control systems (Git) and agile methodologies','Passion for creating excellent user experiences and writing quality code'] }
-    ];
+  {
+    id: 1,
+    title: 'FP&A Analyst',
+    department: 'finance',
+    departmentDisplay: 'Finance',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: "We're seeking a talented Financial Planning & Analysis Analyst to join our finance team and drive strategic financial decision-making.",
+    responsibilities: [
+      'Create and maintain comprehensive financial forecasting models to support strategic business planning',
+      'Conduct detailed variance analysis between actual results and budget projections, identifying key drivers',
+      'Prepare monthly, quarterly, and annual financial reports for senior leadership and stakeholders',
+      'Collaborate with department leaders to develop accurate budget forecasts and track performance',
+      'Build dynamic dashboards and reporting tools to provide real-time financial visibility',
+      'Support strategic initiatives through detailed financial modeling and scenario analysis',
+      'Analyze business metrics and KPIs to identify opportunities for improvement and growth'
+    ],
+    requirements: [
+      "Bachelor's degree in Finance, Accounting, Economics, or related quantitative field",
+      '2-4 years of experience in financial planning, analysis, or related finance role',
+      'Strong proficiency in Excel including advanced formulas, pivot tables, and financial modeling',
+      'Experience with financial planning software or BI tools (e.g., Adaptive Insights, Tableau, Power BI)',
+      'Exceptional analytical and problem-solving capabilities with attention to detail',
+      'Excellent communication skills with ability to present complex financial data clearly',
+      'Understanding of accounting principles and financial statements',
+      'Ability to work independently and manage multiple priorities in a fast-paced environment'
+    ]
+  },
+  {
+    id: 2,
+    title: 'Senior Software Engineer',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: 'Join our R&D team to build innovative AI-powered solutions that transform how businesses operate and make decisions.',
+    responsibilities: [
+      'Design and develop high-quality, scalable software solutions for AI-driven applications',
+      'Lead technical architecture decisions and establish best practices for the development team',
+      'Collaborate with product managers and designers to translate requirements into technical solutions',
+      'Mentor junior engineers and conduct thorough code reviews to maintain code quality',
+      'Optimize application performance and ensure system reliability at scale',
+      'Research and integrate cutting-edge technologies and AI frameworks into products',
+      'Contribute to technical documentation and knowledge sharing within the team'
+    ],
+    requirements: [
+      "Bachelor's or Master's degree in Computer Science, Engineering, or related technical field",
+      "5+ years of professional software development experience",
+      "Strong proficiency in modern programming languages (Python, JavaScript, Java, or similar)",
+      "Experience building and deploying production-grade applications",
+      "Solid understanding of software architecture patterns and design principles",
+      "Familiarity with cloud platforms (AWS, Azure, or GCP) and containerization technologies",
+      "Experience with AI/ML frameworks is a strong advantage",
+      "Excellent problem-solving skills and ability to work in an agile environment"
+    ]
+  },
+  {
+    id: 3,
+    title: 'Machine Learning Engineer',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: 'Build and deploy advanced machine learning models that power our AI consulting solutions and drive client success.',
+    responsibilities: [
+      'Design, develop, and deploy machine learning models for various business applications',
+      'Work with large datasets to extract meaningful insights and train robust ML models',
+      'Optimize model performance through feature engineering and hyperparameter tuning',
+      'Collaborate with software engineers to integrate ML models into production systems',
+      'Stay current with latest ML research and apply innovative techniques to solve business problems',
+      'Build automated ML pipelines for model training, evaluation, and deployment',
+      'Monitor model performance in production and implement improvements as needed'
+    ],
+    requirements: [
+      "Master's or PhD in Computer Science, Data Science, Machine Learning, or related field",
+      '3+ years of hands-on experience developing and deploying ML models in production',
+      'Strong programming skills in Python and ML frameworks (TensorFlow, PyTorch, scikit-learn)',
+      'Deep understanding of machine learning algorithms, deep learning, and statistical methods',
+      'Experience with MLOps practices and tools for model deployment and monitoring',
+      'Proficiency in data processing and analysis using pandas, NumPy, and similar libraries',
+      'Strong mathematical foundation in linear algebra, statistics, and optimization',
+      'Excellent communication skills to explain complex technical concepts to non-technical stakeholders'
+    ]
+  },
+  {
+    id: 4,
+    title: 'Data Scientist',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: 'Leverage data analytics and machine learning to uncover insights that drive strategic decisions for our clients.',
+    responsibilities: [
+      'Analyze complex datasets to identify patterns, trends, and actionable business insights',
+      'Develop predictive models and statistical analyses to solve business challenges',
+      'Create compelling data visualizations and dashboards to communicate findings effectively',
+      'Collaborate with cross-functional teams to understand business needs and translate them into analytical solutions',
+      'Design and conduct experiments (A/B tests) to validate hypotheses and measure impact',
+      'Build and maintain data pipelines to ensure reliable access to quality data',
+      'Present analytical findings and recommendations to stakeholders and clients'
+    ],
+    requirements: [
+      "Master's degree in Data Science, Statistics, Computer Science, or quantitative field",
+      '3+ years of experience in data science or analytics role',
+      'Strong proficiency in Python or R for statistical analysis and modeling',
+      'Experience with data visualization tools (Tableau, Power BI, or similar)',
+      'Solid understanding of statistical methods, hypothesis testing, and experimental design',
+      'Familiarity with SQL and database technologies for data extraction and manipulation',
+      'Knowledge of machine learning techniques and when to apply them',
+      'Excellent storytelling ability to translate technical findings into business value'
+    ]
+  },
+  {
+    id: 5,
+    title: 'DevOps Engineer',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: 'Build and maintain the infrastructure that powers our AI solutions, ensuring reliability, scalability, and security.',
+    responsibilities: [
+      'Design and implement CI/CD pipelines to automate software delivery processes',
+      'Manage cloud infrastructure and ensure optimal performance, security, and cost-efficiency',
+      'Implement monitoring, logging, and alerting systems for proactive issue detection',
+      'Collaborate with development teams to optimize application deployment and scaling',
+      'Automate infrastructure provisioning using Infrastructure as Code tools',
+      'Ensure system security through implementation of best practices and regular audits',
+      'Troubleshoot production issues and implement solutions to prevent recurrence'
+    ],
+    requirements: [
+      "Bachelor's degree in Computer Science, Engineering, or related technical field",
+      '3+ years of experience in DevOps, Site Reliability Engineering, or similar role',
+      'Strong experience with cloud platforms (AWS, Azure, or GCP)',
+      'Proficiency in containerization technologies (Docker, Kubernetes)',
+      'Experience with Infrastructure as Code tools (Terraform, CloudFormation, Ansible)',
+      'Solid scripting skills in Python, Bash, or similar languages',
+      'Knowledge of monitoring and logging tools (Prometheus, Grafana, ELK stack)',
+      'Understanding of networking, security principles, and system architecture'
+    ]
+  },
+  {
+    id: 6,
+    title: 'Full Stack Developer',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Tel Aviv, Israel',
+    type: 'Full-time',
+    description: 'Develop end-to-end solutions that deliver exceptional user experiences and power our AI consulting platform.',
+    responsibilities: [
+      'Build responsive and intuitive web applications using modern frontend frameworks',
+      'Develop robust backend services and APIs to support application functionality',
+      'Design and implement database schemas and optimize query performance',
+      'Collaborate with UX designers to implement pixel-perfect user interfaces',
+      'Write clean, maintainable, and well-tested code following best practices',
+      'Integrate third-party services and APIs to extend application capabilities',
+      'Participate in code reviews and contribute to technical documentation'
+    ],
+    requirements: [
+      "Bachelor's degree in Computer Science or related field, or equivalent experience",
+      '3+ years of full stack development experience',
+      'Strong proficiency in frontend technologies (React, Vue.js, or Angular)',
+      'Experience with backend frameworks (Node.js, Django, Flask, or similar)',
+      'Solid understanding of RESTful API design and implementation',
+      'Proficiency in database technologies (SQL and NoSQL)',
+      'Familiarity with version control systems (Git) and agile methodologies',
+      'Passion for creating excellent user experiences and writing quality code'
+    ]
+  },
+  {
+    id: 7,
+    title: 'Data Team Lead',
+    department: 'rnd',
+    departmentDisplay: 'R&D',
+    location: 'Israel',
+    type: 'Full-time',
+    description:
+      'Lead our data organization, managing multiple data teams and owning the architecture and roadmap that power our AI-driven products.',
+    responsibilities: [
+      'Provide hands-on leadership for several data squads composed of engineers, analysts, and data scientists',
+      'Define and maintain a long-term data strategy and roadmap that supports our AI and product vision',
+      'Plan and prioritize work to balance tech-debt reduction, legacy system migrations, and next-generation product delivery',
+      'Act as the primary coordination point between data teams and stakeholders such as Product, Customer Success, UX, R&D, Algorithms, Systems, and Infrastructure',
+      'Identify, prioritize, and proactively remove cross-team dependencies and delivery risks',
+      'Own and evolve the data platform architecture, including data modeling, pipelines, and data services',
+      'Drive modernization of the data stack, including GenAI enablement, serverless patterns, and scalable lakehouse and processing architectures',
+      'Promote engineering best practices across the teams, including design standards, code reviews, CI/CD, testing, infrastructure-as-code, and robust APIs for partner teams'
+    ],
+    requirements: [
+      '6+ years of experience in data engineering or a comparable data-focused engineering role',
+      'At least 2 years of experience leading or managing data teams',
+      'Proven ability to manage cross-functional roadmaps, planning processes, and execution',
+      'Strong expertise in large-scale data architectures, data modeling, and distributed processing patterns',
+      'Hands-on experience with cloud-native environments such as AWS or similar platforms',
+      'Track record of modernizing or replatforming legacy data systems',
+      'Familiarity with modern open-source lakehouse technologies such as Delta Lake or Apache Iceberg',
+      'Understanding of event-driven architectures and streaming-oriented systems'
+    ]
+  }
+];
+
 
     let currentFilter = 'all';
     let expandedJobId = null;
