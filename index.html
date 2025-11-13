@@ -229,7 +229,7 @@
         <p class="media-sub">A glimpse of our team, spaces, and moments.</p>
       </div>
       <div class="marquee">
-        <div class="marquee__track">
+        <div class="marquee__track" id="marqueeTrack">
           <!-- Track A -->
           <figure class="frame"><img src="assets/balloons.webp" alt="Balloons celebration" loading="lazy"></figure>
           <figure class="frame"><img src="assets/cs_office.avif" alt="Customer success office" loading="lazy"></figure>
@@ -272,6 +272,23 @@
 
   
   <script>
+
+    // Shuffle marquee images on load
+(function shuffleMarquee() {
+  const track = document.getElementById('marqueeTrack');
+  const items = Array.from(track.children);
+
+  // Fisher–Yates shuffle
+  for (let i = items.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [items[i], items[j]] = [items[j], items[i]];
+  }
+
+  // Rebuild the track with shuffled items
+  track.innerHTML = "";
+  items.forEach(item => track.appendChild(item.cloneNode(true)));
+})();
+
     // ===== Typing effect =====
     (function typingEffect(){
       const el = document.getElementById('typing');
