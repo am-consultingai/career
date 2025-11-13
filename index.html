@@ -273,21 +273,21 @@
   
   <script>
 
-    // Shuffle marquee images on load
-(function shuffleMarquee() {
+  (function shuffleMarquee() {
   const track = document.getElementById('marqueeTrack');
-  const items = Array.from(track.children);
+  const items = Array.from(track.children).slice(0, track.children.length / 2); // only first half
 
-  // Fisher–Yates shuffle
+  // Shuffle original set
   for (let i = items.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [items[i], items[j]] = [items[j], items[i]];
   }
 
-  // Rebuild the track with shuffled items
+  // Rebuild: original + duplicate for looping
   track.innerHTML = "";
-  items.forEach(item => track.appendChild(item.cloneNode(true)));
+  [...items, ...items.map(item => item.cloneNode(true))].forEach(el => track.appendChild(el));
 })();
+
 
     // ===== Typing effect =====
     (function typingEffect(){
