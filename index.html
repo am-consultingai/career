@@ -498,7 +498,10 @@
     }
 
     function applyForJob(jobTitle) {
-      const subject = encodeURIComponent(jobTitle);
+      const params = new URLSearchParams(window.location.search);
+      const src = params.get('src') || '';
+      const subjectText = src ? `${jobTitle} job_id - <${src}>` : jobTitle;
+      const subject = encodeURIComponent(subjectText);
       const body = encodeURIComponent(`Hello. I'm interested in the ${jobTitle} opening you have.`);
       window.location.href = `mailto:careers@amconsultingai.com?subject=${subject}&body=${body}`;
     }
