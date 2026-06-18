@@ -325,6 +325,7 @@
     const jobs = [
   {
     id: 1,
+    posId: '2b17',
     title: 'Data Scientist',
     department: 'rnd',
     departmentDisplay: 'R&D',
@@ -353,6 +354,7 @@
   },
   {
     id: 2,
+    posId: '2a4f',
     title: 'Junior Data Engineer (Data Science & Snowflake)',
     department: 'rnd',
     departmentDisplay: 'R&D',
@@ -382,6 +384,7 @@
   },
   {
     id: 3,
+    posId: '763d',
     title: 'Senior Backend Engineer',
     department: 'rnd',
     departmentDisplay: 'R&D',
@@ -412,6 +415,7 @@
   },
   {
     id: 4,
+    posId: '4579',
     title: 'QA Data Automation Engineer',
     department: 'rnd',
     departmentDisplay: 'R&D',
@@ -445,6 +449,7 @@
   },
   {
     id: 5,
+    posId: '0acf',
     title: 'AI Marketing Automation and Operation',
     department: 'operations',
     departmentDisplay: 'Operations',
@@ -509,7 +514,7 @@
               <ul>${job.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
               <h4 style="margin-top: 10px;">Requirements</h4>
               <ul>${job.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
-              <button class="apply-btn" onclick="event.stopPropagation(); applyForJob('${job.title}')">Apply Now</button>
+              <button class="apply-btn" onclick="event.stopPropagation(); applyForJob('${job.title}', '${job.posId}')">Apply Now</button>
             </div>
           ` : ''}
         </article>
@@ -528,10 +533,12 @@
       }
     }
 
-    function applyForJob(jobTitle) {
+    function applyForJob(jobTitle, posId) {
       const params = new URLSearchParams(window.location.search);
       const src = params.get('src') || '';
-      const subjectText = src ? `${jobTitle} job_id - <${src}>` : jobTitle;
+      let subjectText = jobTitle;
+      if (posId) subjectText += ` (pos id: ${posId})`;
+      if (src) subjectText += ` job_id - <${src}>`;
       const subject = encodeURIComponent(subjectText);
       const body = encodeURIComponent(`Hello. I'm interested in the ${jobTitle} opening you have.`);
       window.location.href = `mailto:careers@amconsultingai.com?subject=${subject}&body=${body}`;
