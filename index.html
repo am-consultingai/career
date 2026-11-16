@@ -324,159 +324,33 @@
     // ===== Jobs data (unchanged) =====
     const jobs = [
   {
-    id: 1,
-    posId: '2b17',
-    title: 'Data Scientist',
+    id: 9,
+    posId: 'e6d1',
+    title: 'Data Analyst (Analytics & FinOps)',
     department: 'rnd',
     departmentDisplay: 'R&D',
-    location: 'Tel Aviv, Israel',
+    location: 'Herzliya, Israel',
     type: 'Full-time',
-    description: 'Leverage data analytics and machine learning to uncover insights that drive strategic decisions for our clients.',
+    description: 'Be the technical foundation of the Product & R&D Analytics and FinOps team, building the data infrastructure and automation that let analytics and cost management run on AI.',
     responsibilities: [
-      'Analyze complex datasets to identify patterns, trends, and actionable business insights',
-      'Develop predictive models and statistical analyses to solve business challenges',
-      'Create compelling data visualizations and dashboards to communicate findings effectively',
-      'Collaborate with cross-functional teams to understand business needs and translate them into analytical solutions',
-      'Design and conduct experiments (A/B tests) to validate hypotheses and measure impact',
-      'Build and maintain data pipelines to ensure reliable access to quality data',
-      'Present analytical findings and recommendations to stakeholders and clients'
+      'Design and build data structures that are equally usable by people and by AI/LLM tools',
+      "Own the engineering of the team's data pipelines, keeping them reliable, well-documented, and easy to extend",
+      'Turn existing FinOps and Product & R&D analytics processes into AI-driven, automated workflows',
+      'Connect the FinOps and product analytics tracks through shared, consistent data infrastructure',
+      'Troubleshoot, tune, and optimize pipelines and automations as data volumes and use cases grow',
+      'Partner closely with analysts to translate their data needs into robust, scalable solutions',
+      'Work alongside Product and R&D leadership to support data-driven decisions on cost, usage, and performance'
     ],
     requirements: [
-      "Master's degree in Data Science, Statistics, Computer Science, or quantitative field",
-      '3+ years of experience in data science or analytics role',
-      'Strong proficiency in Python or R for statistical analysis and modeling',
-      'Experience with data visualization tools (Tableau, Power BI, or similar)',
-      'Solid understanding of statistical methods, hypothesis testing, and experimental design',
-      'Familiarity with SQL and database technologies for data extraction and manipulation',
-      'Knowledge of machine learning techniques and when to apply them',
-      'Excellent storytelling ability to translate technical findings into business value'
-    ]
-  },
-  {
-    id: 2,
-    posId: '2a4f',
-    title: 'Junior Data Engineer (Data Science & Snowflake)',
-    department: 'rnd',
-    departmentDisplay: 'R&D',
-    location: 'Tel Aviv, Israel',
-    type: 'Contract-to-Hire',
-    description: "Bridge the gap between Data Science research and production by implementing complex algorithmic requirements and architecting a robust semantic layer on Snowflake for a new in-house model.",
-    responsibilities: [
-      'Translate complex algorithmic requirements from the Data Science team into efficient, production-ready Python code within the Snowflake environment',
-      'Architect and maintain a structured semantic layer on Snowflake to serve as the single source of truth for model consumers',
-      'Develop and optimize Data Science features using NumPy and Pandas, ensuring high-quality inputs for proprietary models',
-      "Refine data into 'Silver' tables by applying complex business logic and rigorous cleaning procedures within Snowflake",
-      'Leverage understanding of PostgreSQL structures to migrate or interface with existing relational data logic',
-      'Conduct deep-dive Exploratory Data Analysis (EDA) to validate that data transformations align with mathematical model expectations',
-      'Collaborate closely with Data Scientists to iterate on feature engineering and model performance metrics',
-      'Take immediate ownership of technical tasks in a fast-paced environment with a path toward a permanent role'
-    ],
-    requirements: [
-      'Up to 2 years of experience in Data Engineering, Data Science, or a technical analytical role',
-      'Strong proficiency in Python with the ability to write clean, maintainable, and efficient code',
-      'Hands-on experience with the Python scientific stack, specifically Pandas and NumPy',
-      'Strong foundational understanding of relational database principles',
-      'Experience with Snowflake for data warehousing and transformation is a significant advantage',
-      'Strong analytical and mathematical mindset, capable of understanding and implementing algorithmic logic',
-      'Proven ability to perform Exploratory Data Analysis (EDA) to ensure data quality and model readiness',
-      'Educational background in Computer Science, Mathematics, Physics, or a related quantitative field'
-    ]
-  },
-  {
-    id: 3,
-    posId: '763d',
-    title: 'Senior Backend Engineer',
-    department: 'rnd',
-    departmentDisplay: 'R&D',
-    location: 'Israel',
-    type: 'Full-time',
-    description: 'Build resilient, scalable backend systems that power our AI-driven products, operating at the crossroads of real-time data, cloud services, and intelligent automation.',
-    responsibilities: [
-      'Architect and develop reliable, high-performance components across the full software stack',
-      'Take end-to-end ownership of complex features, from early design through production rollout',
-      'Partner with product managers, systems engineers, and AI researchers to deliver integrated solutions',
-      'Develop platforms that combine real-time sensor data, video analytics, and cloud-based services',
-      'Build and maintain CI/CD pipelines along with comprehensive automated test suites',
-      'Champion code quality through clean, testable implementations and test-driven development',
-      'Mentor fellow engineers and help shape engineering standards across the team'
-    ],
-    requirements: [
-      '5+ years of software engineering experience, including at least 2 years working with Python',
-      'Hands-on experience building backend services using microservices architecture',
-      'Strong proficiency with both SQL and NoSQL database technologies',
-      'Proven expertise designing scalable, distributed systems',
-      'Working knowledge of CI/CD environments and modern testing frameworks',
-      'Solid grasp of test-driven development principles',
-      'Excellent English communication skills, both written and verbal',
-      "Bachelor's degree in Computer Science or Engineering is an advantage",
-      'Familiarity with AWS services (Lambda, SQS, CloudFront, EKS), Docker, and Kubernetes is a plus',
-      'Exposure to computer vision, AI systems, or video streaming technologies is an advantage'
-    ]
-  },
-  {
-    id: 4,
-    posId: '4579',
-    title: 'QA Data Automation Engineer',
-    department: 'rnd',
-    departmentDisplay: 'R&D',
-    location: 'Israel',
-    type: 'Full-time',
-    description: 'Safeguard data integrity across our analytics infrastructure by validating pipelines, transformations, and reporting layers end-to-end, from ingestion through consumption.',
-    responsibilities: [
-      'Design and maintain automated QA tests covering data pipelines and downstream data products',
-      'Run functional, regression, and sanity tests across applications and analytical dashboards',
-      'Verify data flow integrity through ingestion, transformation, and reporting stages',
-      'Perform data quality checks for completeness, consistency, and schema conformance',
-      'Author SQL queries to validate business logic, joins, aggregations, and surface anomalies',
-      'Develop validation frameworks and automation scripts using Python',
-      'Partner with Data Engineering and BI teams to define test scope and acceptance criteria',
-      'Investigate failures, identify root causes, and produce clear, actionable bug reports',
-      'Maintain thorough test documentation and manage issue tracking in Jira',
-      'Continuously improve QA monitoring practices to accelerate release velocity'
-    ],
-    requirements: [
-      '4+ years of QA experience, with hands-on exposure to automation or data validation workflows',
-      'Strong knowledge of QA methodologies, including STP and structured QA cycles',
-      'Proven testing experience with ETL/ELT systems and data warehouse environments',
-      'Advanced SQL skills for building complex validation queries',
-      'Solid Python skills for test automation, with familiarity in pytest considered a plus',
-      'Hands-on experience with Snowflake or comparable cloud data platforms',
-      'Proficient with Jira for bug tracking and workflow management',
-      'Sharp attention to detail with strong analytical and problem-solving abilities',
-      'Excellent cross-functional communication skills',
-      'Familiarity with AWS and experience optimizing large-scale datasets is a plus'
-    ]
-  },
-  {
-    id: 5,
-    posId: '0acf',
-    title: 'AI Marketing Automation and Operation',
-    department: 'operations',
-    departmentDisplay: 'Operations',
-    location: 'Israel',
-    type: 'Full-time',
-    description: 'Own the technical backbone of an AI-native marketing engine, building the structured knowledge base every agent draws from and the agentic workflows that turn strategy into production at scale.',
-    responsibilities: [
-      'Build and maintain a Git-based, machine-readable content repository that holds messaging frameworks, brand guidelines, persona profiles, competitive positioning, and use cases',
-      'Architect repo structure, file schemas, naming conventions, and update flows so that when a marketer edits a single file, every downstream agent immediately produces sharper output',
-      'Build and maintain the agentic layer: the skills, orchestration files, automations, and shared-memory structures that power content creation, repurposing, and distribution',
-      'Set and enforce a strict quality bar across both layers, treating context that agents cannot reliably read as a production bug',
-      'Design and ship the core campaign workflows that let marketers trigger a full production cycle without re-explaining the brand or brief each time',
-      'Build agents and automations that serve the whole marketing org, from demand gen and product marketing to content, brand, field, and partner teams',
-      'Connect the agentic layer to the martech stack, including CRM, marketing automation, paid media, and distribution tools, and own the integration architecture in production',
-      'Enable the marketing team to become genuinely AI-native by building systems intuitive enough for non-technical users to adopt, update, and improve on their own',
-      'Translate pain points from across the team into working AI solutions and document them clearly so the team’s capabilities compound over time',
-      'Stay ahead of emerging AI tooling, agentic frameworks, and orchestration platforms, continuously raising the bar on workflow speed, context quality, and integration reliability'
-    ],
-    requirements: [
-      '2+ years of hands-on experience building AI agents in production, real systems real teams rely on day to day',
-      'Deep understanding of how agents consume structured context and how repository architecture drives output quality',
-      'Fluency with Git used as a context and workflow operating system, not just a code repository',
-      'Familiarity with LLM frameworks, agentic tooling, and low-code orchestration platforms such as n8n, Make, or equivalents',
-      'Working knowledge of the martech stack across CRM, marketing automation, and campaign tools',
-      'Proven ability to translate a marketer’s pain point into a working technical solution and explain it back in plain language',
-      'A builder’s mindset that thrives on problems without an established playbook',
-      'Comfortable working cross-functionally with marketing, engineering, and leadership stakeholders'
+      '3-5 years of experience in data engineering, analytics engineering, or a similar hands-on data role',
+      'Excellent SQL skills and hands-on experience with pipeline tools such as Airflow or dbt',
+      'Experience with BI tools such as Looker or Tableau',
+      'Daily, practical use of AI tools, with experience building data structures that AI can reliably consume',
+      'B.Sc. in Industrial Engineering or a similar field',
+      'Highly independent and accountable, with strong cross-functional communication skills',
+      'Experience with automation tools such as Make is an advantage',
+      'Python or another programming language for automation is an advantage',
+      'Experience building AI agent-based workflows is an advantage'
     ]
   },
   {
